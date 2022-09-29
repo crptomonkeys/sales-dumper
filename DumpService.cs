@@ -51,7 +51,7 @@ namespace SalesDumper
                         x.Sale.Seller,
                         x.Sale.CreatedAtTime,
                         x.Sale.State,
-                        x.Sale.ListingPrice,
+                        PriceWax = Math.Round(x.Sale.Price.Amount / (decimal)Math.Pow(10, x.Sale.Price.TokenPrecision), 2),
                         Buyer = x.Sale.Buyer ?? default,
                         x.Asset.AssetId,
                         x.Asset.Schema?.SchemaName,
