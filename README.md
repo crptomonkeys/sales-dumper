@@ -4,6 +4,8 @@ Dumps all actual and historical sales from AtomicHub into CSV file.
 
 ⚠ AtomicHub throttles API requests to 90 per minute (per IP). This tool "sleeps" automatically when needed, but your other AtomicHub activites (other tools, regular browsing) may be affected.
 
+⚠ AtomicHub allows to sell several assets in one sale offer. This tool makes one line per each asset (repeating sale field values: Id, Price etc), so NEVER make Sum(Price) over original file - remove duplicates by SaleId field first.
+
 ## Requirements
 
 * .NET SDK (v6.0 and later) from https://dotnet.microsoft.com/en-us/download
