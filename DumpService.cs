@@ -75,7 +75,11 @@ namespace SalesDumper
                     templatesToGo);
             }
 
-            logger.LogInformation("Dumped {Count} sales into {FileName}, {Elapsed} elapsed", counter, fileName, timer.Elapsed.Truncate(TimeSpan.FromSeconds(1)));
+            logger.LogInformation(
+                "Dumped {Count} sales into {FileName}, {Elapsed} elapsed",
+                counter,
+                fileName,
+                timer.Elapsed.Truncate(TimeSpan.FromSeconds(1)));
         }
     }
 }

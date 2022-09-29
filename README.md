@@ -16,12 +16,11 @@ Not required.
 
 1. Clone this repo
 2. Open command prompt (`cmd.exe`) or shell
-3. Navigate to `SalesDumper` subfolder
-4. Type `dotnet run` and press `Enter`
+3. Type `dotnet run` and press `Enter`
 
-Text like this means everything works.
+Output like this means everything works.
 ![Sample output](sample.png)
 
 At time of writing this tool (September 2002, ~190 templates) full download takes about 20 minutes.
 
-Data are written into `crptomonkeys-sales.csv` in `SalesDumper` folder.
+Data are written into `crptomonkeys-sales.csv`.
