@@ -1,4 +1,6 @@
-﻿using AtomicAssetsClient;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using AtomicAssetsClient;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -29,3 +31,6 @@ var app = builder.Build();
 var dumper = app.Services.GetRequiredService<DumpService>();
 
 await dumper.Run().ConfigureAwait(false);
+
+// wait while logger flushes
+await Task.Delay(1000).ConfigureAwait(false);
